@@ -4,6 +4,8 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import { Button } from './Components/Button'
 import { Input } from './Components/Input'
+import { MatchCard } from './Components/MatchCard'
+import { FlexContainer } from './Components/FlexContainer/FlexContainer'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -23,7 +25,30 @@ function App() {
         {/* <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button> */}
-
+        <FlexContainer isColumn={true}>
+          <MatchCard 
+          value="" 
+          imgAlt="Lich King" 
+          image="https://as01.epimg.net/meristation/imagenes/2007/08/03/noticia/1186175340_719504_1533291750_sumario_normal.jpg" 
+          name="Diego Camere" 
+          trait="Teamwork" 
+          onClick={() => {
+            alert('hey') 
+          }}>
+            <div>hey!!</div>
+          </MatchCard>
+          <MatchCard 
+          value="" 
+          imgAlt="Lich King" 
+          image="https://as01.epimg.net/meristation/imagenes/2007/08/03/noticia/1186175340_719504_1533291750_sumario_normal.jpg" 
+          name="Diego Camere" 
+          trait="Teamwork" 
+          onClick={() => {
+            alert('hey') 
+          }}>
+            <div>hey!!</div>
+          </MatchCard>
+        </FlexContainer>
         <Button onClick={() => {alert('hey')}} value="" size="l">Click Me!</Button>
         <Input placeholder="Introduce tu juego de interes" value="" size="l" type=""/>
         <p>
