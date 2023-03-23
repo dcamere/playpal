@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import { Button } from './Components/Button'
+import { Input } from './Components/Input'
 import { MatchCard } from './Components/MatchCard'
 import { FlexContainer } from './Components/FlexContainer/FlexContainer'
 
@@ -24,13 +25,6 @@ function App() {
         {/* <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button> */}
-        {/* onClick: (value: T) => void;
-    value: T;
-    children: React.ReactNode;
-    name: string;
-    trait: string;
-    image: string;
-    imgAlt: string; */}
         <FlexContainer isColumn={true}>
           <MatchCard 
           value="" 
@@ -56,6 +50,7 @@ function App() {
           </MatchCard>
         </FlexContainer>
         <Button onClick={() => {alert('hey')}} value="" size="l">Click Me!</Button>
+        <Input placeholder="Introduce tu juego de interes" value="" size="l" type=""/>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
