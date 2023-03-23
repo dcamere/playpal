@@ -1,20 +1,15 @@
 import { Button } from '../../Components/Button'
 import { Input } from '../../Components/Input'
-import { FlexContainer } from '../../Components/FlexContainer/FlexContainer'
-import { redirect } from 'react-router-dom';
-import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export const Login = () => {
-    // function redirectToPage(pageUrl: string) {
-    //     const history = useHistory();
-    //     history(pageUrl);
-    //   }
+    const navigate = useNavigate();
+    const redirectToPage = () => navigate('/Matcher')
 
-    const handleLogin = () => {
+    const handleLogin = () => {        
         const user = document.querySelectorAll("input")[0].value;
-        const password = document.querySelectorAll("input")[1].value;
-
-        if (user === "admin" && password === "1234") redirect('/Matcher')
+        const password = document.querySelectorAll("input")[1].value;        
+        if (user === "admin" && password === "1234") redirectToPage()
         
     }
 
