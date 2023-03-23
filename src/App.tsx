@@ -50,7 +50,7 @@ function App() {
           </MatchCard>
         </FlexContainer>
         <Button onClick={() => {alert('hey')}} value="" size="l">Click Me!</Button>
-        <Input placeholder="Introduce tu juego de interes" value="" size="l" type=""/>
+        <Input placeholder="Introduce tu juego de interes" size="l" type=""/>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
