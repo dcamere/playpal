@@ -3,6 +3,7 @@ import './App.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './Views/Login/Login';
 import { Matcher } from './Views/Matcher';
+import Register from './Views/Register/Register';
 
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Login/>} />
         <Route path='/Matcher' element={<Matcher/>} />
+        <Route path='/Register' element={<Register/>} />
         {/* <Route path='/Profile' element={<Profile/>} />
         <Route path='/Register' element={<Register/>} /> */}
       </Routes>
