@@ -6,16 +6,17 @@ type ButtonProps<T> = {
     children: React.ReactNode;
     size: String;
     btnType?:String;
+    type?:String
 }
 
 
-export function Button<T>({ onClick, value, children, size, btnType }: ButtonProps<T>) {
+export function Button<T>({ onClick, value, children, size, btnType, type}: ButtonProps<T>) {
     const handleClick = () => {
       onClick(value);
     };
   
     return (
-      <button className={`button button--${size} button--${btnType}`} onClick={handleClick}>
+      <button className={`button button--${size} button--${btnType}`} type={type} onClick={handleClick} >
         {children}
       </button>
     );
