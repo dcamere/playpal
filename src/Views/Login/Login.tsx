@@ -3,6 +3,7 @@ import { Input } from '../../Components/Input'
 import { FlexContainer } from '../../Components/FlexContainer/FlexContainer'
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import './Login.scss';
 
 function Login() {
     const navigate = useNavigate();
