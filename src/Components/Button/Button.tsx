@@ -4,10 +4,12 @@ type ButtonProps<T> = {
     onClick: (value: T) => void;
     value: T;
     children: React.ReactNode;
-    size: String;
+    size?: String;
     btnType?:String;
-    type?:String
+    type?: ButtonType
 }
+
+type ButtonType = "submit" | "reset" | "button";
 
 
 export function Button<T>({ onClick, value, children, size, btnType, type}: ButtonProps<T>) {
@@ -16,7 +18,7 @@ export function Button<T>({ onClick, value, children, size, btnType, type}: Butt
     };
   
     return (
-      <button className={`button button--${size} button--${btnType}`} type={type} onClick={handleClick} >
+      <button className={`button button--${size} button--${btnType}`} type={type ? type : "button"} onClick={handleClick} >
         {children}
       </button>
     );

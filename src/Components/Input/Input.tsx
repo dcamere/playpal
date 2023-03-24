@@ -4,7 +4,7 @@ type InputProps<T> = {
     placeholder?: string;
     value?: string;
     type?: string;
-    size: string;
+    size?: string;
     name?: string;
 }
 
