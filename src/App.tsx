@@ -15,20 +15,12 @@ function App() {
         <Routes>
           <Route path='/' element={<Login/>} />
           <Route path='/Matcher' element={<Matcher/>} />
+          <Route path='/Register' element={<Register/>} />
           {/* <Route path='/Profile' element={<Profile/>} />
           <Route path='/Register' element={<Register/>} /> */}
         </Routes>
       </Router>
     </>
-    <Router>
-      <Routes>
-        <Route path='/' element={<Login/>} />
-        <Route path='/Matcher' element={<Matcher/>} />
-        <Route path='/Register' element={<Register/>} />
-        {/* <Route path='/Profile' element={<Profile/>} />
-        <Route path='/Register' element={<Register/>} /> */}
-      </Routes>
-    </Router>
   )
 }
 
