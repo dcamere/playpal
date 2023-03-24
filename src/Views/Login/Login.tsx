@@ -36,6 +36,9 @@ function Login() {
                 <span>{message}</span>
             </>
         }
+        <br></br>
+        <br></br>
+        <Button size="l" value={undefined} btnType="discord"><img src="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0a6ca814282eca7172c6_icon_clyde_white_RGB.svg" alt="Discord Logo"></img> <br /> Login with Discord</Button>
     </div> 
 }
 
