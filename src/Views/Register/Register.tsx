@@ -1,6 +1,7 @@
 import { Input } from "../../Components/Input";
 import { Button } from "../../Components/Button";
 import { FlexContainer } from "../../Components/FlexContainer/FlexContainer";
+import { TextArea } from "../../Components/TextArea";
 
 function Register(){
     const dummyDiscordObject = {
@@ -35,6 +36,8 @@ function Register(){
                 <Input placeholder="Password" type="password" name="password"/>
                 <br />
                 <Input value={dateConverter(dummyDiscordObject.birthday)} placeholder="Fecha de nacimiento" type="date" name="birthday"/>
+                <br />
+                <TextArea cols={50} rows={7}  placeholder="Tell us more about you!" name="aboutUser"></TextArea>
                 <br />
                 <hr />
                 <Button onClick={() => {

@@ -1,0 +1,14 @@
+.input {
+  border-radius: 8px;
+  border-color: transparent;
+  outline: none;
+}
+.input--s {
+  width: 100px;
+}
+.input--m {
+  width: 150px;
+}
+.input--l {
+  width: 300px;
+}/*# sourceMappingURL=Input.css.map */
