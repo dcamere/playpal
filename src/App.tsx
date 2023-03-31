@@ -5,11 +5,12 @@ import Login from './Views/Login/Login';
 import { Matcher } from './Views/Matcher';
 import { Header } from './Components/Header';
 import Register from './Views/Register/Register';
+import { AppContextProvider } from './contexts/AppContext';
 
 
 function App() {
   return (
-    <>
+    <AppContextProvider>
       <Header />
       <Router>
         <Routes>
@@ -20,7 +21,7 @@ function App() {
           <Route path='/Register' element={<Register/>} /> */}
         </Routes>
       </Router>
-    </>
+    </AppContextProvider>
   )
 }
 

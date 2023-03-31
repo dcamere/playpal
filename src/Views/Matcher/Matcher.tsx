@@ -1,24 +1,40 @@
-import { Button } from '../../Components/Button'
-import { Input } from '../../Components/Input'
+// import { Button } from '../../Components/Button'
+// import { Input } from '../../Components/Input'
 import { MatchCard } from '../../Components/MatchCard'
-import { FlexContainer } from '../../Components/FlexContainer/FlexContainer'
-import Modal from '../../Components/Modal/Modal'
-import React, { useState } from 'react'
+// import { FlexContainer } from '../../Components/FlexContainer/FlexContainer'
+// import Modal from '../../Components/Modal/Modal'
+import React, { useContext, useState } from 'react'
 import './Matcher.scss';
 import Slider, { Settings } from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { useAppContext, AppContext } from '../../contexts/AppContext';
 
 export const Matcher = () => {
+  const context = useContext(AppContext)
+  const { name } = useAppContext();
+
     const [isProfileModalOpen, setIsProfileModalOpen] = useState(false);
     
     const settings = {
-      dots: true,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 3,
-      slidesToScroll: 3,
+      dots: true, // show pagination dots
+      infinite: true, // loop back to the beginning after reaching the end
+      speed: 500, // transition speed in milliseconds
+      slidesToShow: 3, // show 3 slides at once in desktop view
+      slidesToScroll: 3, // scroll 1 slide at a time
+      responsive: [
+        {
+          breakpoint: 768, // switch to mobile view at 768px
+          settings: {
+            slidesToShow: 1, // show 1 slide at a time in mobile view
+            slidesToScroll: 1 // scroll 1 slide at a time
+          }
+        }
+      ]
     };
+
+    console.log(context);
+    console.log(name)
 
     return <div className="Matcher">
       <h2>These pals are perfect for you:</h2>
@@ -48,7 +64,7 @@ export const Matcher = () => {
           <MatchCard 
           value="" 
           imgAlt="Lich King" 
-          image="https://source.unsplash.com/random/200x200?sig=1" 
+          image="https://source.unsplash.com/random/200x200?sig=3" 
           name="Salvatore Pazzaglia" 
           trait="Friendly" 
           onClick={() => {
@@ -59,7 +75,7 @@ export const Matcher = () => {
           <MatchCard 
           value="" 
           imgAlt="Lich King" 
-          image="https://source.unsplash.com/random/200x200?sig=3" 
+          image="https://source.unsplash.com/random/200x200?sig=4" 
           name="Diego Camere" 
           trait="Teamwork" 
           onClick={() => {
@@ -81,7 +97,7 @@ export const Matcher = () => {
           <MatchCard 
           value="" 
           imgAlt="Lich King" 
-          image="https://source.unsplash.com/random/200x200?sig=4" 
+          image="https://source.unsplash.com/random/200x200?sig=6" 
           name="Diego Camere" 
           trait="Teamwork" 
           onClick={() => {
