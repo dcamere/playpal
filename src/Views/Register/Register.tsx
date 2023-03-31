@@ -1,6 +1,7 @@
 import { Input } from "../../Components/Input";
 import { Button } from "../../Components/Button";
 import { FlexContainer } from "../../Components/FlexContainer/FlexContainer";
+import { TextArea } from "../../Components/TextArea";
 import RadioButton from "../../Components/RadioButton/RadioButton";
 import { useState } from "react";
 
@@ -52,6 +53,7 @@ function Register(){
                 <br />
                 <Input value={dateConverter(dummyDiscordObject.birthday)} placeholder="Fecha de nacimiento" type="date" name="birthday"/>
                 <br />
+                <TextArea cols={50} rows={7}  placeholder="Tell us more about you!" name="aboutUser"></TextArea>
                 <FlexContainer center isColumn>
                     {genres.map((genre) => (
                         <RadioButton
@@ -64,8 +66,6 @@ function Register(){
                         />
                     ))}
                 </FlexContainer>
-                
-                
                 <br />
                 <hr />
                 <Button onClick={() => {
