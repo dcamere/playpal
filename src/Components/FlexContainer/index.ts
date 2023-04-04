@@ -1,1 +1,1 @@
-import * from './FlexContainer';
+export * from './FlexContainer';

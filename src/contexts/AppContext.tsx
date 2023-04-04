@@ -3,6 +3,7 @@ import React, { createContext, useContext } from 'react';
 interface AppContextType {
   /* your context properties and methods here */
   name: string
+  isLoggedIn: boolean
 }
 
 export const AppContext = createContext<AppContextType | undefined>(undefined);
@@ -19,7 +20,8 @@ export function AppContextProvider({ children }: { children: React.ReactNode }) 
   /* your context state and functions here */
   const contextValue = {
     /* your context value here */
-    name: "Diego"
+    name: "Diego",
+    isLoggedIn: false,
   };
 
   return <AppContext.Provider value={contextValue}>{children}</AppContext.Provider>;

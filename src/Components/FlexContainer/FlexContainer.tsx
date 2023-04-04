@@ -14,4 +14,5 @@ export function FlexContainer<T>({children, isColumn, isInline, center}:FlexCont
       </div>
     );
   }
-  
+
+export default FlexContainer;
