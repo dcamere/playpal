@@ -1,12 +1,12 @@
 import './Loader.scss';
 
 type LoaderProps<T> = {
-    
+    isLoading: boolean;
 }
 
-export function Loader<T>({}:LoaderProps<T>) {
+export function Loader<T>({isLoading}:LoaderProps<T>) {
     return (
-      <div className="loader">
+      <div className={`loader ${isLoading ? "loader--open" : ""}`}>
         <img src="#" alt="#" /> 
       </div>
     );
