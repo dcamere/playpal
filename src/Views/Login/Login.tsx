@@ -4,6 +4,7 @@ import { FlexContainer } from '../../Components/FlexContainer/FlexContainer'
 import { useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import './Login.scss';
+import { Loader } from '../../Components/Loader';
 
 function Login() {
     const navigate = useNavigate();
@@ -55,6 +56,7 @@ function Login() {
         <a href="https://discord.com/api/oauth2/authorize?client_id=1088816783982608434&redirect_uri=http%3A%2F%2F44.201.173.161%2Fauth&response_type=token&scope=identify%20email">Login with discord</a>
         {/* <Button href="http://44.201.173.161:3000/"  onClick={afe} size="l" value={undefined} btnType="discord"><img src="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0a6ca814282eca7172c6_icon_clyde_white_RGB.svg" alt="Discord Logo"></img> <br /> Login with Discord</Button> */}
         <p>Not an user? <a href="./Register">Register now!</a></p>
+        <Loader isLoading={false} />
     </div> 
 }
 
