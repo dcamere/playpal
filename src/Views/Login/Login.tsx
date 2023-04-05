@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import './Login.scss';
 import { Loader } from '../../Components/Loader';
+import axios from 'axios';
 
 function Login() {
     const navigate = useNavigate();
@@ -12,15 +13,16 @@ function Login() {
     const [data, setData] = useState<any>();
 
     useEffect(() => {
-        fetch('http://44.201.173.161:3000/')
-        .then(response => response.json())
-        .then((data: any) => {
-            setData(data)
-            // console.log(data) 
+        axios.get('http://44.201.173.161:3000/')
+        .then(response => {
+            // handle success
+            setData(response.data)
+            console.log(response.data);
         })
-        .catch(error => console.log(error));
-
-        
+        .catch(error => {
+            // handle error
+            console.log(error);
+        });      
     }, [])
 
     const handleLogin = () => {
