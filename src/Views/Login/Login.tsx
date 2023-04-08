@@ -4,6 +4,7 @@ import { FlexContainer } from '../../Components/FlexContainer/FlexContainer'
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import './Login.scss';
+import { Loader } from '../../Components/Loader';
 
 function Login() {
     const navigate = useNavigate();
@@ -41,6 +42,7 @@ function Login() {
         <br></br>
         <Button  onClick={handleLogin} size="l" value={undefined} btnType="discord"><img src="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0a6ca814282eca7172c6_icon_clyde_white_RGB.svg" alt="Discord Logo"></img> <br /> Login with Discord</Button>
         <p>Not an user? <a href="./Register">Register now!</a></p>
+        <Loader isLoading={false} />
     </div> 
 }
 
