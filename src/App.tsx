@@ -6,6 +6,7 @@ import { Matcher } from './Views/Matcher';
 import { Header } from './Components/Header';
 import Register from './Views/Register/Register';
 import { AppContextProvider } from './contexts/AppContext';
+import { Loader } from './Components/Loader';
 
 
 function App() {
