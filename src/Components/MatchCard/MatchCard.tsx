@@ -1,3 +1,4 @@
+import { Trait } from '../Trait';
 import './MatchCard.scss';
 
 type MatchCardProps<T> = {
@@ -8,9 +9,10 @@ type MatchCardProps<T> = {
     trait: string;
     image: string;
     imgAlt: string;
+    id: string;
 }
 
-export function MatchCard<T>({onClick, value, children, name, trait, image, imgAlt}:MatchCardProps<T>) {
+export function MatchCard<T>({onClick, value, children, name, trait, image, imgAlt, id}:MatchCardProps<T>) {
     const onClickFn = () => {
         onClick(value); 
     }
@@ -23,7 +25,14 @@ export function MatchCard<T>({onClick, value, children, name, trait, image, imgA
 
         <div className="match-card__content">
           <h2 className="match-card__name">{name}</h2>
-          <div className="match-card__trait">{trait} 😄</div>
+          <Trait 
+            traitName={trait}
+            size="m" 
+            close={false}
+            id={id}
+            // backgroundColor="gray" 
+            // color="white" 
+          />
           {children}
         </div>
       </div>

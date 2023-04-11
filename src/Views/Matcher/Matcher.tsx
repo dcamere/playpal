@@ -41,10 +41,11 @@ export const Matcher = () => {
         <Slider {...settings}>
           <MatchCard 
           value="" 
+          id="1"
           imgAlt="Lich King" 
           image="https://source.unsplash.com/random/200x200?sig=1" 
           name="Salvatore Pazzaglia" 
-          trait="Friendly" 
+          trait="Friendly 😄" 
           onClick={() => {
             setIsProfileModalOpen(true);
             console.log(isProfileModalOpen);
@@ -52,10 +53,11 @@ export const Matcher = () => {
           </MatchCard>
           <MatchCard 
           value="" 
+          id="2"
           imgAlt="Lich King" 
           image="https://source.unsplash.com/random/200x200?sig=2" 
           name="Diego Camere" 
-          trait="Teamwork" 
+          trait="Teamwork 😄" 
           onClick={() => {
             setIsProfileModalOpen(true);
             console.log(isProfileModalOpen);
@@ -63,10 +65,11 @@ export const Matcher = () => {
           </MatchCard>
           <MatchCard 
           value="" 
+          id="3"
           imgAlt="Lich King" 
           image="https://source.unsplash.com/random/200x200?sig=3" 
           name="Salvatore Pazzaglia" 
-          trait="Friendly" 
+          trait="Friendly 😄" 
           onClick={() => {
             setIsProfileModalOpen(true);
             console.log(isProfileModalOpen);
@@ -74,10 +77,11 @@ export const Matcher = () => {
           </MatchCard>
           <MatchCard 
           value="" 
+          id="4"
           imgAlt="Lich King" 
           image="https://source.unsplash.com/random/200x200?sig=4" 
           name="Diego Camere" 
-          trait="Teamwork" 
+          trait="Teamwork 😄" 
           onClick={() => {
             setIsProfileModalOpen(true);
             console.log(isProfileModalOpen);
@@ -85,10 +89,11 @@ export const Matcher = () => {
           </MatchCard>
           <MatchCard 
           value="" 
+          id="5"
           imgAlt="Lich King" 
           image="https://source.unsplash.com/random/200x200?sig=5" 
           name="Salvatore Pazzaglia" 
-          trait="Friendly" 
+          trait="Friendly 😄" 
           onClick={() => {
             setIsProfileModalOpen(true);
             console.log(isProfileModalOpen);
@@ -96,10 +101,11 @@ export const Matcher = () => {
           </MatchCard>
           <MatchCard 
           value="" 
+          id="6"
           imgAlt="Lich King" 
           image="https://source.unsplash.com/random/200x200?sig=6" 
           name="Diego Camere" 
-          trait="Teamwork" 
+          trait="Teamwork 😄" 
           onClick={() => {
             setIsProfileModalOpen(true);
             console.log(isProfileModalOpen);
