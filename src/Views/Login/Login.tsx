@@ -13,28 +13,36 @@ function Login() {
     const [data, setData] = useState<any>();
 
     useEffect(() => {
-        axios.get('http://44.201.173.161:3000/')
-        .then(response => {
-            // handle success
-            setData(response.data)
-            console.log(response.data);
-        })
-        .catch(error => {
-            // handle error
-            console.log(error);
-        });      
+        // axios.get('http://44.201.173.161:3000/')
+        // .then(response => {
+        //     // handle success
+        //     setData(response.data)
+        //     console.log(response.data);
+        // })
+        // .catch(error => {
+        //     // handle error
+        //     console.log(error);
+        // });      
     }, [])
 
     const handleLogin = () => {
         const user = document.querySelectorAll("input")[0].value;
         const password = document.querySelectorAll("input")[1].value;
 
-        if (user === data[0].user && password === data[0].password) {
+        if (user === "admin" && password === "1234") {
+            console.log('success!')
             setMessage("")
             navigate('/Matcher')
         } else {
             setMessage("Error de autenticación")
         }
+        
+        // if (user === data[0].user && password === data[0].password) {
+        //     setMessage("")
+        //     navigate('/Matcher')
+        // } else {
+        //     setMessage("Error de autenticación")
+        // }
     }
 
     return <div className="Login">
